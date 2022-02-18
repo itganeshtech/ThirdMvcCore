@@ -50,7 +50,7 @@ namespace ThirdMvcCore
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Site}/{action=RegisterUser}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
