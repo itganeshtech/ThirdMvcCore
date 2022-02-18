@@ -20,6 +20,16 @@ namespace ThirdMvcCore.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Name"] = "John Smith";
+            TempData["City"] = "Newyork";
+            Person p1 = new Person();
+            p1.Name = "Great Ganesh Sharma";
+            p1.City = "Lucknow";
+            ViewData["Person"] = p1;
+            return RedirectToAction("Index","Site2");
+        }
+        public IActionResult Index2()
+        {
             return View();
         }
 

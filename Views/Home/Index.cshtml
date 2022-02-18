@@ -4,5 +4,32 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <hr />
+    <p>City: @ViewData["City"]</p>
+    @{
+    Person p1 = ViewData["Person"] as Person;
+    }
+    <p>Full Name:@p1.Name and City is @p1.City</p>
+
+    <hr />
+    @{
+        var name = ViewData["Name"];
+        var age = 40;
+        var i = 0;
+        if (age == 40)
+        {
+            while (i <= 10)
+            {
+                <p>@name</p>
+                i++;
+            }
+        }
+        else
+        {
+            <p>You are good.</p>
+        }
+    }
+    <p>Today is @DateTime.Now.ToString()</p>
+    <p>@name, Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p> your age is @age</p>
 </div>
